@@ -1,0 +1,64 @@
+# Git и система контроля версий
+.git
+.gitignore
+.github
+
+# Node.js зависимости
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Docker-файлы (оставляем необходимые, удаляем остальные)
+# Dockerfile - нужен для нашей сборки
+# docker-compose.yml - может понадобиться для ссылок
+docker-compose.override.yml
+.dockerignore
+
+# Переменные окружения и конфигурации
+.env*
+.editorconfig
+.eslintrc
+.prettierrc
+*.config.js
+
+# Логи и данные
+logs
+*.log
+data/*
+!data/.gitkeep
+
+# Сертификаты (не игнорируем, так как они могут понадобиться)
+# *.pem
+# *.key
+# *.crt
+
+# Документация и примеры (оставляем README.md для информации)
+# README.md
+docs
+# LICENSE
+
+# Временные файлы и директории
+.tmp
+.temp
+.cache
+.DS_Store
+
+# Бэкапы и архивы
+*.tar
+*.tar.gz
+*.zip
+*.bak
+
+# Тесты
+test
+__tests__
+*.test.js
+*.spec.js
+
+# IDE и редакторы
+.idea
+.vscode
+*.swp
+*.swo
+*~ 

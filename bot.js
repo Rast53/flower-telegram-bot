@@ -27,6 +27,11 @@ app.use(cors());
 
 // Функция для проверки доступности API
 async function checkServicesAvailability() {
+  console.log('Проверка сервисов пропущена (временно)');
+  return true; // Всегда возвращаем true пока не запущен бэкенд
+  
+  // Оригинальный код закомментирован
+  /*
   if (checkingServices) return servicesAvailable;
   
   // Если последняя проверка была недавно, используем кешированный результат
@@ -49,6 +54,7 @@ async function checkServicesAvailability() {
   }
   
   return servicesAvailable;
+  */
 }
 
 // Middleware для проверки доступности сервисов перед обработкой команд

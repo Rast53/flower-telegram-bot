@@ -30,6 +30,8 @@ data/*
 
 # Локальные файлы Docker
 docker-compose.override.yml
+*.tar
+*.tar.gz
 
 # Кэш редакторов и IDE
 .idea/
@@ -37,4 +39,4 @@ docker-compose.override.yml
 *.swp
 *.swo
 *~
-.DS_Store 
+.DS_Store

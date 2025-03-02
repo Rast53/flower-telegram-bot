@@ -72,9 +72,8 @@ while [ $# -gt 0 ]
 do
     case "$1" in
         *:* )
-        WAITFORIT_hostport=(${1//:/ })
-        WAITFORIT_HOST=${WAITFORIT_hostport[0]}
-        WAITFORIT_PORT=${WAITFORIT_hostport[1]}
+        WAITFORIT_HOST=$(echo $1 | cut -d: -f1)
+        WAITFORIT_PORT=$(echo $1 | cut -d: -f2)
         shift 1
         ;;
         -t)
