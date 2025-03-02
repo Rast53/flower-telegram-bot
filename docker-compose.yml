@@ -9,10 +9,10 @@ services:
       - NODE_ENV=production
       - BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
       - WEBAPP_URL=${WEBAPP_URL:-https://ra.nov.ru}
-      - API_URL=${API_URL:-http://flower-backend:3000}
+      - API_URL=${API_URL:-http://127.0.0.1:3000}
       - PORT=3000
     ports:
-      - "3001:3000"
+      - "8081:3000"
     volumes:
       - ./data:/app/data
       - /volume2/cert/fullchain.pem:/app/fullchain.pem
@@ -28,6 +28,9 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
 
 networks:
   default:

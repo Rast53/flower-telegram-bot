@@ -87,7 +87,7 @@ do
         ;;
         --)
         shift
-        WAITFORIT_CLI=("$@")
+        WAITFORIT_CLI="$@"
         break
         ;;
         --help)
@@ -116,10 +116,10 @@ else
     exit 1
 fi
 
-if [ "${WAITFORIT_CLI[0]}" != "" ]; then
+if [ "${WAITFORIT_CLI}" != "" ]; then
     if wait_for_wrapper; then
-        echoerr "$WAITFORIT_cmdname: Запуск: ${WAITFORIT_CLI[*]}"
-        exec "${WAITFORIT_CLI[@]}"
+        echoerr "$WAITFORIT_cmdname: Запуск: ${WAITFORIT_CLI}"
+        exec ${WAITFORIT_CLI}
     else
         echoerr "$WAITFORIT_cmdname: Ошибка при ожидании"
         exit 1
