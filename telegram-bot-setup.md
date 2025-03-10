@@ -31,9 +31,6 @@ help - Помощь
 ## 4. Сборка Docker образа для бота
 
 ```bash
-# Переименуйте файлы
-mv bot-package.json package.json
-mv bot-Dockerfile Dockerfile
 
 # Соберите образ
 docker build -t rast53/flower-telegram-bot:latest .
